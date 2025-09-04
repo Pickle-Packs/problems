@@ -16,35 +16,6 @@ export type Problem = Readonly<{
   type: string;
 }>;
 ```
-
-`contentType = 'application/problem+json; charset=utf-8'`.
-
-`statusCodes`:
-
-```
-badRequest: 400
-conflict: 409
-forbidden: 403
-gone: 410
-internalServerError: 500
-methodNotAllowed: 405
-notAcceptable: 406
-notFound: 404
-notImplemented: 501
-paymentRequired: 402
-preconditionFailed: 412
-preconditionRequired: 428
-requestTimeout: 408
-serviceUnavailable: 503
-tooManyRequests: 429
-unauthorized: 401
-unavailableForLegalReasons: 451
-unprocessableContent: 422
-unsupportedMediaType: 415
-```
-
-Errors are added under `extensions.errors`.
-
 ## API
 
 All creators return `Problem`.
