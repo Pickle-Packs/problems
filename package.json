@@ -1,0 +1,53 @@
+{
+    "name": "@pickle-packs/problems",
+    "version": "1.0.1",
+    "description": "Utilities for creating ProblemDetails",
+    "license": "Apache-2.0",
+    "author": "",
+    "type": "module",
+    "sideEffects": false,
+    "exports": {
+        ".": {
+            "import": "./dist/index.js",
+            "types": "./dist/index.d.ts"
+        }
+    },
+    "engines": {
+        "node": ">=20"
+    },
+    "files": [
+        "dist/**",
+        "README.md",
+        "LICENSE"
+    ],
+    "scripts": {
+        "clean": "rimraf dist",
+        "lint": "eslint \"src/**/*.ts\"",
+        "pack": "npm run build && npm pack",
+        "sync-version": "npm version from-git --no-git-tag-version",
+        "build": "npm run clean && tsup",
+        "test": "vitest",
+        "coverage": "vitest run --coverage"
+    },
+    "devDependencies": {
+        "@eslint/js": "^9.34.0",
+        "@eslint/migrate-config": "^1.5.3",
+        "@stylistic/eslint-plugin": "^5.3.1",
+        "@types/node": "^24.3.1",
+        "@vitest/coverage-v8": "^3.2.4",
+        "eslint": "^9.34.0",
+        "eslint-plugin-functional": "^9.0.2",
+        "eslint-plugin-n": "^17.21.3",
+        "eslint-plugin-perfectionist": "^4.15.0",
+        "prettier": "^3.6.2",
+        "rimraf": "^6.0.1",
+        "tsup": "^8.5.0",
+        "tsx": "^4.20.5",
+        "typescript": "^5.9.2",
+        "typescript-eslint": "^8.42.0",
+        "vitest": "^3.2.4"
+    },
+    "peerDependencies": {
+        "@pickle-packs/nads": "^1.0.3"
+    }
+}
